@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>测试页面</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #MainContainer,.sections,.section{
+            height:100%;
+            position:relative;
+            background-color:lightgreen;
+        }
+        html,body{
+            height:100%;
+            overflow:hidden;
+        }
+        #MainContainer ul{
+            width:100%;
+            position:absolute;
+            height:30px;
+            bottom:0;
+        }
+        #MainContainer .nav{
+            position:fixed;
+            height :32px;
+            width:100%;
+            bottom:1%;
+        }
+    </style>
+</head>
+<body>
+    <div id="MainContainer" class="container-fluid">
+        <div class="sections">
+            <div class="section active" id="section1">
+                <span>Home</span>
+            </div>
+            <div class="section active" id="section2">
+                <span>Reposity</span>
+            </div>
+            <div class="section active" id="section3">
+                <span>Trade</span>
+            </div>
+            <div class="section active" id="section4">
+                <span>Settings</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="Scripts/jquery-3.1.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/PageSwitch.js"></script>
+    <script>
+        $("#MainContainer").PageSwitch({
+            direction: "horizontal",
+            pagination: true,
+            paginationtext: new Array("首页", "库存", "交易", "设置"),
+
+        })
+    </script>
+</body>
+</html>
